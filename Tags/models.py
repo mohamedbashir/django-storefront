@@ -40,6 +40,6 @@ class TaggedItem(models.Model):
 
     # -> ContentType :model that represent type of object in our application => allow Generic Relationship
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    product_id = models.PositiveIntegerField()
+    object_id = models.PositiveIntegerField()
     # actual_object -> read the actual object that partuclar tag is apply too
     content_object = GenericForeignKey()
